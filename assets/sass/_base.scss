@@ -1,0 +1,19 @@
+.navbar-default{
+	background-color: $color-nav;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: $background-menu;
+    border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color:$color-menu;
+}
+
+.icon{
+	color: $color-menu;
+	margin-left: 5%;
+	padding-top:10px;
+	font-size: 15px;
+}
