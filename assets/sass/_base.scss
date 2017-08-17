@@ -38,3 +38,44 @@ p{
 }
 
 /*Fin Nav*/
+
+/*Comienzo Welcome*/
+.imagen-fondo{
+	background-image: url('../img/tastyfoodintro.jpg');
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.titulo{
+	color: $color-menu;
+	font-weight: bold;
+	margin-top: 50%;
+	font-size: 47px;
+}
+
+.btn-uno{
+	background-color: $background-boton;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 150px;
+	color: $color-menu;
+	margin-top: 30%;
+	font-size: 16px;
+}
+
+.btn-dos{
+	background-color: $background-boton;
+	border: none;
+	border-radius: 8px;
+	padding: 10px 150px;
+	color: $color-menu;
+	margin-top: 3%;
+	font-size: 14px;
+}
+
+#frase{
+	color: $color-menu;
+}
+
+/*Fin Welcome*/
