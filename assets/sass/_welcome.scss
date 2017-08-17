@@ -32,6 +32,7 @@
 			text-decoration: none;
 			color: white;
 		}
+	}
 	.logIn{
 		display: none;
 		.divLogIn{
@@ -58,4 +59,17 @@
 	}	
 	}
 }
+
+.divWelcome{
+	a{
+		.btnCreate{
+		background-color: $color-btn;
+		color: white;
+		border: none;
+		margin: 10px;
+		font-size: 15px;
+		height: 40px;
+		width: 94%;
+		}
+	}
 }
