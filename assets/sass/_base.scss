@@ -38,3 +38,32 @@ p{
 }
 
 /*Fin Nav*/
+
+
+
+
+/*Discover*/
+
+.navbar{
+	margin-bottom: 0;
+}
+
+.discover{
+	background-color: #eaeaea;
+	
+	&__container{
+		padding-top: 6%;
+		padding-bottom: 4%;
+		&__select{
+			width: 100%;
+			border-radius: 5px;
+			padding: 2%;
+			border-color: transparent;
+		}
+		&__map{
+			height: 90vh;
+		}
+	}
+}
+
+/*Fin Discover*/
