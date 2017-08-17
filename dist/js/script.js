@@ -12667,6 +12667,9 @@ $(document).ready( function() {
 		}); 	
 	});
 
+/*local storage*/
 
+$('.datos').append('<p>'+localStorage.getItem(nameDat)+'</p>'+
+					'<p>'+localStorage.getItem(mailDat)+'</p>');
 
 /*fin profile*/

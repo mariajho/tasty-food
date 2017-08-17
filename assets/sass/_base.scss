@@ -84,4 +84,29 @@ p{
 	height:50px;
 }
 
+.form-cajita{
+	border: 1px solid #fafafa;
+	padding: 20px 70px;
+	margin-top:20px;
+	background-color:white;
+}
+
+.form-cajita1{
+	margin-top:10px;
+	border: 1px solid #fafafa;
+	padding: 20px 70px;
+}
+
+#name, .form-cajita{
+	background-color:#fff;
+}
+
+#email, .form-cajita1{
+	background-color:#fff;
+}
+
+h3{
+	padding:20px;
+}
+
 /*fin profile*/
