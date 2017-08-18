@@ -12669,6 +12669,7 @@ $(document).ready( function() {
 
 /*local storage*/
 
-$('.datos').append('<p>'+localStorage.getItem('nameDat')+'</p>'+'<p>'+localStorage.getItem('mailDat')+'</p>');
+$('.nameDat').append(localStorage.getItem('nameDat'));
+$('.mailDat').append(localStorage.getItem('mailDat'));
 
 /*fin profile*/
