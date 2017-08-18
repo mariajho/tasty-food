@@ -38,3 +38,35 @@ p{
 }
 
 /*Fin Nav*/
+
+/*search*/
+
+
+.container.info {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.caja {
+	width: 30%;
+	margin: 1%;
+	span {
+		color: black;
+		font-family: 'Roboto', sans-serif;
+		font-size: 8px;
+		margin-top: 0;
+	}
+	span:last-child {
+		float: right;
+	}
+}
+
+.container.detalle {
+	margin: 1%;
+	p {
+		color: black;
+		font-family: 'Roboto', sans-serif;
+		font-size: 13px;
+		margin-top: 0;
+	}
+}
