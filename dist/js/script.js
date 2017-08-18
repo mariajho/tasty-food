@@ -12630,6 +12630,7 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
+
 //Map
 function initMap(){
 	var map = new google.maps.Map(document.getElementById("map"), {
@@ -12756,5 +12757,128 @@ $(document).ready(function(){
 })
 
 //var select = $("#mySelect option:selected").val(); //select
+
+
+
+/*inicio  profile*/
+$(document).ready( function() {
+    	$(document).on('change', '.btn-file :file', function() {
+		var input = $(this),
+			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [label]);
+		});
+
+		$('.btn-file :file').on('fileselect', function(event, label) {
+		    
+		    var input = $(this).parents('.input-group').find(':text'),
+		        log = label;
+		    
+		    if( input.length ) {
+		        input.val(log);
+		    } 
+	    
+		});
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+		        
+		        reader.onload = function (e) {
+		            $('#img-upload').attr('src', e.target.result);
+		        }
+		        
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+
+		$("#imgInp").change(function(){
+		    readURL(this);
+		}); 	
+	});
+
+/*local storage*/
+
+$('.nameDat').append(localStorage.getItem('nameDat'));
+$('.mailDat').append(localStorage.getItem('mailDat'));
+
+/*fin profile*/
+
+ //validaciones create account
+    $('#mnsNameReg').hide();
+	$('#mnsPassReg').hide();
+	$('#mnsMailReg').hide();
+
+	$('#btn-create').click(function(){
+		validateFormAccount();
+	});
+
+	function validateFormAccount(){
+		var nombreReg = $('#nameReg').val();
+		var contrasenaReg = $('#passwordReg').val();
+		var correoReg = $('#mailReg').val();
+
+		var mailRegr = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/;
+
+		if (nombreReg == "" ){
+			$('#mnsNameReg').fadeIn();
+			}else{
+				$('#mnsNameReg').hide();
+        			if(contrasenaReg == ""){
+        				$('#mnsPassReg').fadeIn();
+        				}else{
+        					$('#mnsPassReg').hide();
+        					if(correoReg == "" || !mailRegr.test(correoReg)){
+        						$('#mnsMailReg').fadeIn();
+        						}else{
+        							$('#mnsMailReg').hide();
+        							window.location.href = "movies.html";
+        							guardarDatos();
+        							}
+        						}
+        					}
+						}
+
+
+	
+	 function guardarDatos(){
+	 	localStorage.setItem("nameDat", $('#nameReg').val());
+	 	localStorage.setItem("passDat", $('#passwordReg').val());
+	 	localStorage.setItem("mailDat",	$('#mailReg').val());
+	 }
+
+$(document).ready(function(){ 
+	//toggle del boton login
+   $('#btn-logIn').on('click',function(){
+      $('#log-In').toggle('slow');
+   });
+   //validacion login
+	$('#mensajeName').hide();
+	$('#mensajePass').hide();
+
+	$('#letsgo').click(function(){
+		validateForm();
+	});
+	function validateForm(){
+		var usuario = $('#name').val();
+		var contrasena = $('#pass').val();
+		var usuarioLocal= localStorage.getItem('nameDat');
+		var contrasenaLocal=localStorage.getItem('passDat');
+
+		if (usuario == usuarioLocal && contrasena == contrasenaLocal){
+			window.location.href = "profile.html"; 
+				}else{
+					if(usuario == "" || usuario != usuarioLocal){
+						$('#mensajeName').fadeIn();
+						}else{
+							$('#mensajeName').hide();
+							if(contrasena == "" || contrasena != contrasenaLocal){
+								$('#mensajePass').fadeIn();
+							}
+						}
+					}
+				}	
+		
+        
+
+});
 
 
