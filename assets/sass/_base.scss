@@ -38,3 +38,79 @@ p{
 }
 
 /*Fin Nav*/
+
+/*inicio profile*/
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color:#FE8428;
+    color:#fff;
+    width:100%;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: #FE8428;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
+}
+
+.datos{
+	background-color:#ddd;
+	height:180px;
+}
+
+#name{
+	width:100%;
+	height:50px;
+	margin-top:20px;
+}
+
+#email{
+	width:100%;
+	height:50px;
+}
+
+.form-cajita{
+	border: 1px solid #fafafa;
+	padding: 20px 70px;
+	margin-top:20px;
+	background-color:white;
+}
+
+.form-cajita1{
+	margin-top:10px;
+	border: 1px solid #fafafa;
+	padding: 20px 70px;
+}
+
+#name, .form-cajita{
+	background-color:#fff;
+}
+
+#email, .form-cajita1{
+	background-color:#fff;
+}
+
+h3{
+	padding:20px;
+}
+
+.icon a{
+	color:#fff;
+}
+
+/*fin profile*/
