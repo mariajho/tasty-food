@@ -9,39 +9,61 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-       <div class="icon text-left">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="icon text-left">
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
-       </div>
-    </div>
+        </div>
+      </div>
 
-     <p class="text-center">DISCOVER</p>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <p class="text-center">DISCOVER</p>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="welcome.html">Welcome</a></li>
+          <li><a href="index.html">Sign Up</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <section class="discover">
+    <div class="container-fluid">
+      <div class="row discover__container">
+        <div class="col-xs-12 text-center">
+          <select id="cousine-select" class="discover__container__select">
+            <option value="0">Cousine</option>
+            <!-- cousines options from API -->
+          </select>
+        </div>
+      </div>
       
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="welcome.html">Welcome</a></li>
-        <li><a href="index.html">Sign Up</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="profile.html">Profile</a></li>
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      <div class="mostrar"></div>
+
+      <div class="row discover__container">
+        <div id="map" class="col-xs-12 discover__container__map">
+          <!-- map -->
+        </div>
+      </div>
+    </div>
+  </section>
   
-<script src="https://use.fontawesome.com/4154d90246.js" ></script>
-<script type="text/javascript" src="dist/js/script.js"></script>
+  <script src="https://use.fontawesome.com/4154d90246.js" ></script>
+  <!-- Google Maps APIs-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiT0A73FmtP4MQbnN3Eqsr_J0vki7VOV8&callback=initMap&libraries=places"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- script.js -->
+  <script type="text/javascript" src="dist/js/script.js"></script>
 </body>
 </html>
